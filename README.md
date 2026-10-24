@@ -222,15 +222,33 @@ Target kriteria: **MAE test (scaled) < 0,015** &rarr; status: _lulus / belum lul
 -  [FAIL] Seq2Seq final : test MAE (scaled) = 0.01822  (target < 0.015)
 -  [PASS] Seq2Seq best  : test MAE (scaled) = 0.00767  (target < 0.015)
 
-### Visualisasi
+### Visualisasi Hasil Model
 
-<!-- Simpan gambar dari notebook ke folder assets/ lalu hilangkan komentar pada baris berikut -->
+<table>
+  <tr>
+    <td align="center"><b>Prediksi 24 Jam (Baseline LSTM)</b></td>
+    <td align="center"><b>Prediksi 24 Jam (Seq2Seq LSTM Autoregressive)</b></td>
+  </tr>
+  <tr>
+    <td><img src="assets/prediksi_24_jam (Baseline LSTM).png" width="100%"></td>
+    <td><img src="assets/prediksi_24_jam (Seq2Seq LSTM (Autoregressive)).png" width="100%"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Prediksi Periode Test</b></td>
+    <td align="center"><b>MAE per Forecast Step</b></td>
+  </tr>
+  <tr>
+    <td><img src="assets/prediksi_test_penuh.png" width="100%"></td>
+    <td><img src="assets/mae_per_step.png" width="100%"></td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2"><b>Training Curve</b></td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2"><img src="assets/training_curve.png" width="60%"></td>
+  </tr>
+</table>
 
-![Prediksi 24 jam](assets/prediksi_24_jam (Baseline LSTM).png)
-![Prediksi 24 jam](assets/prediksi_24_jam (Seq2Seq LSTM (Autoregressive)).png)
-![Prediksi periode test](assets/prediksi_test_penuh.png)
-![MAE per step](assets/mae_per_step.png)
-![Training curve](assets/training_curve.png)
 
 
 ### Contoh tabel perbandingan (24 jam ke depan)

@@ -225,11 +225,13 @@ Target kriteria: **MAE test (scaled) < 0,015** &rarr; status: _lulus / belum lul
 ### Visualisasi
 
 <!-- Simpan gambar dari notebook ke folder assets/ lalu hilangkan komentar pada baris berikut -->
+
 ![Prediksi 24 jam](assets/prediksi_24_jam (Baseline LSTM).png)
-<!-- ![Prediksi 24 jam](assets/prediksi_24_jam (Seq2Seq LSTM (Autoregressive)).png) -->
-<!-- ![Prediksi periode test](assets/prediksi_test_penuh.png) -->
-<!-- ![MAE per step](assets/mae_per_step.png) -->
-<!-- ![Training curve](assets/training_curve.png) -->
+![Prediksi 24 jam](assets/prediksi_24_jam (Seq2Seq LSTM (Autoregressive)).png)
+![Prediksi periode test](assets/prediksi_test_penuh.png)
+![MAE per step](assets/mae_per_step.png)
+![Training curve](assets/training_curve.png)
+
 
 ### Contoh tabel perbandingan (24 jam ke depan)
 

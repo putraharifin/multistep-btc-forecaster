@@ -211,12 +211,16 @@ Saat inference, `autoregressive_predict()` memulai dari Close terakhir yang dike
 
 | Model | MAE (scaled) | RMSE (scaled) | MAE (USD) | RMSE (USD) | MAPE (%) |
 |---|---|---|---|---|---|
-| Naive (last value), referensi | _..._ | _..._ | _..._ | _..._ | _..._ |
-| Baseline LSTM | _..._ | _..._ | _..._ | _..._ | _..._ |
-| Seq2Seq LSTM (epoch terakhir, autoregressive) | _..._ | _..._ | _..._ | _..._ | _..._ |
-| Seq2Seq LSTM (validasi terbaik, autoregressive) | _..._ | _..._ | _..._ | _..._ | _..._ |
+| Naive (last value), referensi | _0.00971_ | _0.01225_ | _635.87_ | _801.91_ | _2.448_ |
+| Baseline LSTM | _0.00360_ | _0.00603_ | _235.61_ | _394.71_ | _0.932_ |
+| Seq2Seq LSTM (epoch terakhir, autoregressive) | _0.01822_ | _0.02169_ | _1,192.80_ | _1,420.15	_ | _4.749_ |
+| Seq2Seq LSTM (validasi terbaik, autoregressive) | _0.00767_ | _0.01041_ | _501.89	_ | _681.62_ | _1.980_ |
 
 Target kriteria: **MAE test (scaled) < 0,015** &rarr; status: _lulus / belum lulus_
+
+[PASS] Baseline LSTM : test MAE (scaled) = 0.00971  (target < 0.015)
+[FAIL] Seq2Seq final : test MAE (scaled) = 0.01822  (target < 0.015)
+[PASS] Seq2Seq best  : test MAE (scaled) = 0.00767  (target < 0.015)
 
 ### Visualisasi
 
@@ -318,10 +322,9 @@ close_usd = pred_seq2seq.numpy() * scaler.data_range_[0] + scaler.data_min_[0]
 - *Exposure bias* pada Seq2Seq (dilatih dengan teacher forcing, diuji autoregressive) dapat diperbaiki dengan *scheduled sampling*.
 - Ide pengembangan: tuning hyperparameter, fitur tambahan (mis. on-chain atau sentimen), *walk-forward validation*, prediksi interval ketidakpastian (quantile loss), dan perbandingan dengan Transformer atau TCN.
 
-## Lisensi & Kontak
+## Kontak
 
-- Lisensi: `<MIT / Apache-2.0 / lainnya>` &larr; pilih dan tambahkan file `LICENSE`.
-- Penulis: `<Nama Anda>`
-- Kontak: `<email / LinkedIn / GitHub>`
+- Penulis: `Muhammad Putra Harifin Pane`
+- Kontak: `putraharifin@gmail.com`
 
 > *Disclaimer*: proyek ini dibuat untuk tujuan pembelajaran dan portofolio, bukan untuk keputusan investasi.

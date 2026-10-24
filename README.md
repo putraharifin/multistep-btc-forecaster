@@ -213,14 +213,14 @@ Saat inference, `autoregressive_predict()` memulai dari Close terakhir yang dike
 |---|---|---|---|---|---|
 | Naive (last value), referensi | _0.00971_ | _0.01225_ | _635.87_ | _801.91_ | _2.448_ |
 | Baseline LSTM | _0.00360_ | _0.00603_ | _235.61_ | _394.71_ | _0.932_ |
-| Seq2Seq LSTM (epoch terakhir, autoregressive) | _0.01822_ | _0.02169_ | _1,192.80_ | _1,420.15	_ | _4.749_ |
-| Seq2Seq LSTM (validasi terbaik, autoregressive) | _0.00767_ | _0.01041_ | _501.89	_ | _681.62_ | _1.980_ |
+| Seq2Seq LSTM (epoch terakhir, autoregressive) | _0.01822_ | _0.02169_ | _1,192.80_ | _1,420.15_ | _4.749_ |
+| Seq2Seq LSTM (validasi terbaik, autoregressive) | _0.00767_ | _0.01041_ | _501.89_ | _681.62_ | _1.980_ |
 
 Target kriteria: **MAE test (scaled) < 0,015** &rarr; status: _lulus / belum lulus_
 
-[PASS] Baseline LSTM : test MAE (scaled) = 0.00971  (target < 0.015)
-[FAIL] Seq2Seq final : test MAE (scaled) = 0.01822  (target < 0.015)
-[PASS] Seq2Seq best  : test MAE (scaled) = 0.00767  (target < 0.015)
+## [PASS] Baseline LSTM : test MAE (scaled) = 0.00971  (target < 0.015)
+## [FAIL] Seq2Seq final : test MAE (scaled) = 0.01822  (target < 0.015)
+## [PASS] Seq2Seq best  : test MAE (scaled) = 0.00767  (target < 0.015)
 
 ### Visualisasi
 
